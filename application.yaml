@@ -2,6 +2,8 @@ tls:
   authorizedEndpoints:
    - endpoint:
        name: metrics
+  crypto:
+     algorithms: elliptic-curve-386,rsa
 nginx:
   server:
     name: example.com

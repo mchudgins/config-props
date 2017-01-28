@@ -1,3 +1,7 @@
+tls:
+  authorizedEndpoints:
+   - endpoint:
+       name: metrics
 nginx:
   server:
     name: example.com

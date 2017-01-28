@@ -1,0 +1,3 @@
+APPLICATION: certMgr
+BASE_IMAGESTREAM: scratch
+GIT_URI: https://github.com/mchudgins/certMgr.git

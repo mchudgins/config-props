@@ -1,3 +1,9 @@
+# The first two fields are global across the openshift deployment templates & application configuration
 APPLICATION: certMgr
-BASE_IMAGESTREAM: scratch
 GIT_URI: https://github.com/mchudgins/certMgr.git
+
+# which endpoints may establish TLS sessions with this application?
+authorizedEndpoints:
+ name: certMgr.dstcorp.net
+ - endpoint: frontend
+ - endpoint: auth

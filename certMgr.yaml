@@ -5,6 +5,6 @@ GIT_URI: https://github.com/mchudgins/certMgr.git
 # which endpoints may establish TLS sessions with this application?
 authorizedEndpoints:
  - server:
-   name: certMgr.dstcorp.net
-   - endpoint: frontend
-   - endpoint: auth
+     name: certMgr.dstcorp.net
+     - endpoint: frontend
+     - endpoint: auth

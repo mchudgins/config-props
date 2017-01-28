@@ -1,4 +1,9 @@
-- application:
-    name: fubar
-      - something: else
-      - hello: world
+nginx:
+  server:
+    name: example.com
+---
+spring:
+  profiles: development
+nginx:
+  server:
+    name: develop.com

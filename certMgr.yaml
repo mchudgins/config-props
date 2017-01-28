@@ -6,5 +6,5 @@ GIT_URI: https://github.com/mchudgins/certMgr.git
 authorizedEndpoints:
  - server:
      name: certMgr.dstcorp.net
-     - endpoint: frontend
-     - endpoint: auth
+       - endpoint: frontend
+       - endpoint: auth

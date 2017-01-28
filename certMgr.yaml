@@ -7,6 +7,6 @@ authorizedEndpoints:
  - server:
      name: certMgr.dstcorp.net
        - endpoint:
-         name: frontend
+           name: frontend
        - endpoint:
-         name: auth
+           name: auth

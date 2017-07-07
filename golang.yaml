@@ -1,0 +1,5 @@
+IMAGESTREAM: golang
+CONTEXT_DIR: /golang
+GIT_REF: master
+GIT_URI: https://github.com/mchudgins/openshift-builders.git
+BASE_IMAGESTREAM: debian:latest

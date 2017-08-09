@@ -6,7 +6,7 @@ tls:
      algorithms: elliptic-curve-386,rsa
 nginx:
   server:
-    name: example.com
+    name: cfg-server.dstcorp.net
 ---
 spring:
   profiles: development

@@ -1,6 +1,6 @@
 nginx:
   server:
-    name: example.com
+    name: config-server.dstcorp.net
 ---
 spring:
   profiles: development

@@ -85,48 +85,5 @@
                 ]
             }
         }
-    ],
-    "parameters": [
-        {
-            "description": "The name for the new imagestream.",
-            "displayName": "Imagestream Name",
-            "name": "IMAGESTREAM",
-            "reqired": true,
-            "value": ""
-        },
-        {
-            "description": "The name:tag of the existing, base imagestream upon which this new imagestream builds.",
-            "displayName": "Base Imagestream Name",
-            "name": "BASE_IMAGESTREAM",
-            "required": true,
-            "value": "centos:7"
-        },
-        {
-            "description": "Git source URI for application",
-            "name": "GIT_URI",
-            "value": "https://github.com/mchudgins/osev3-examples.git"
-        },
-        {
-            "description": "Git branch/tag reference",
-            "name": "GIT_REF",
-            "value": "master"
-        },
-        {
-            "description": "Git Directory",
-            "name": "CONTEXT_DIR",
-            "value": "spring-boot/springboot-sti"
-        },
-        {
-            "description": "Github trigger secret",
-            "from": "[a-zA-Z0-9]{8}",
-            "generate": "expression",
-            "name": "GITHUB_TRIGGER_SECRET"
-        },
-        {
-            "description": "Generic build trigger secret",
-            "from": "[a-zA-Z0-9]{8}",
-            "generate": "expression",
-            "name": "GENERIC_TRIGGER_SECRET"
-        }
     ]
 }

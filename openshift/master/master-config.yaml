@@ -112,12 +112,12 @@ kubernetesMasterConfig:
   apiLevels: null
   apiServerArguments:
     cloud-config:
-    - /etc/aws/aws.conf
+    - /usr/local/etc/origin/aws.conf
     cloud-provider:
     - aws
   controllerArguments:
     cloud-config:
-    - /etc/aws/aws.conf
+    - /usr/local/etc/origin/aws.conf
     cloud-provider:
     - aws
   disabledAPIGroupVersions: {}
@@ -151,7 +151,7 @@ networkConfig:
   clusterNetworkCIDR: 10.128.0.0/14
   externalIPNetworkCIDRs: null
   hostSubnetLength: 9
-  ingressIPNetworkCIDR: 172.29.0.0/16
+#  ingressIPNetworkCIDR: 172.29.0.0/16 # not needed when a cloud provider is specified
   networkPluginName: redhat/openshift-ovs-multitenant
   serviceNetworkCIDR: 172.30.0.0/16
 oauthConfig:
@@ -167,7 +167,7 @@ oauthConfig:
     name: htPassword
     provider:
       apiVersion: v1
-      file: /etc/origin/htpasswd
+      file: /usr/local/etc/origin/htpasswd
       kind: HTPasswdPasswordIdentityProvider
   masterCA: ca-bundle.crt
   masterPublicURL: https://www.${dns-tld}:443

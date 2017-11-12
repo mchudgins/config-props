@@ -34,7 +34,7 @@ assetConfig:
   metricsPublicURL: https://metrics-dev.${dns-tld}
   publicURL: https://www.${dns-tld}:443/console/
   servingInfo:
-    bindAddress: 10.10.128.20:8443
+    bindAddress: ${master-ip-address}:8443
     bindNetwork: tcp4
     certFile: master.server.crt
     clientCA: ''
@@ -65,7 +65,7 @@ corsAllowedOrigins:
 disabledFeatures: null
 dnsConfig:
   allowRecursiveQueries: true
-  bindAddress: 10.10.128.20:8053
+  bindAddress: ${master-ip-address}:8053
   bindNetwork: tcp4
 etcdClientInfo:
   ca: ''
@@ -123,7 +123,7 @@ kubernetesMasterConfig:
   disabledAPIGroupVersions: {}
   masterCount: 1
   masterEndpointReconcileTTL: 15
-  masterIP: 10.10.128.20
+  masterIP: ${master-ip-address}
   podEvictionTimeout: 5m
   proxyClientInfo:
     certFile: master.proxy-client.crt
@@ -171,7 +171,7 @@ oauthConfig:
       kind: HTPasswdPasswordIdentityProvider
   masterCA: ca-bundle.crt
   masterPublicURL: https://www.${dns-tld}:443
-  masterURL: https://10.10.128.20:8443
+  masterURL: https://${master-ip-address}:8443
   sessionConfig:
     sessionMaxAgeSeconds: 300
     sessionName: ssn
@@ -210,7 +210,7 @@ serviceAccountConfig:
   publicKeyFiles:
   - serviceaccounts.public.key
 servingInfo:
-  bindAddress: 10.10.128.20:8443
+  bindAddress: ${master-ip-address}:8443
   bindNetwork: tcp4
   certFile: master.server.crt
   clientCA: ca.crt

@@ -1,0 +1,223 @@
+admissionConfig:
+  pluginConfig:
+    openshift.io/ImagePolicy:
+      configuration:
+        apiVersion: v1
+        executionRules:
+        - matchImageAnnotations:
+          - key: images.openshift.io/deny-execution
+            value: 'true'
+          name: execution-denied
+          onResources:
+          - resource: pods
+          - resource: builds
+          reject: true
+          skipOnResolutionFailure: true
+        kind: ImagePolicyConfig
+      location: ''
+aggregatorConfig:
+  proxyClientInfo:
+    certFile: ''
+    keyFile: ''
+apiLevels:
+- v1
+apiVersion: v1
+assetConfig:
+  extensionDevelopment: false
+  extensionProperties: null
+  extensionScripts: null
+  extensionStylesheets: null
+  extensions: null
+  loggingPublicURL: ''
+  logoutURL: ''
+  masterPublicURL: https://www.${dns-tld}:443
+  metricsPublicURL: https://metrics-dev.${dns-tld}
+  publicURL: https://www.${dns-tld}:443/console/
+  servingInfo:
+    bindAddress: 10.10.128.20:8443
+    bindNetwork: tcp4
+    certFile: master.server.crt
+    clientCA: ''
+    keyFile: master.server.key
+    maxRequestsInFlight: 0
+    namedCertificates: null
+    requestTimeoutSeconds: 0
+auditConfig:
+  auditFilePath: ''
+  enabled: false
+  maximumFileRetentionDays: 0
+  maximumFileSizeMegabytes: 0
+  maximumRetainedFiles: 0
+authConfig:
+  requestHeader: null
+controllerConfig:
+  election: null
+  serviceServingCert:
+    signer:
+      certFile: service-signer.crt
+      keyFile: service-signer.key
+controllerLeaseTTL: 0
+controllers: '*'
+corsAllowedOrigins:
+- 127.0.0.1
+- localhost
+- www.${dns-tld}:443
+disabledFeatures: null
+dnsConfig:
+  allowRecursiveQueries: true
+  bindAddress: 10.10.128.20:8053
+  bindNetwork: tcp4
+etcdClientInfo:
+  ca: ''
+  certFile: ''
+  keyFile: ''
+  urls:
+  - https://10.10.128.5:2379
+etcdConfig: null
+etcdStorageConfig:
+  kubernetesStoragePrefix: kubernetes.io
+  kubernetesStorageVersion: v1
+  openShiftStoragePrefix: openshift.io
+  openShiftStorageVersion: v1
+imageConfig:
+  format: openshift/origin-${component}:${version}
+  latest: false
+imagePolicyConfig:
+  allowedRegistriesForImport:
+  - domainName: docker.io
+  - domainName: '*.docker.io'
+  - domainName: '*.redhat.com'
+  - domainName: gcr.io
+  - domainName: quay.io
+  - domainName: '*.amazonaws.com'
+  disableScheduledImport: false
+  maxImagesBulkImportedPerRepository: 5
+  maxScheduledImageImportsPerMinute: 60
+  scheduledImageImportMinimumIntervalSeconds: 900
+jenkinsPipelineConfig:
+  autoProvisionEnabled: true
+  parameters: null
+  serviceName: jenkins
+  templateName: jenkins-ephemeral
+  templateNamespace: openshift
+kind: MasterConfig
+kubeletClientInfo:
+  ca: ca.crt
+  certFile: master.kubelet-client.crt
+  keyFile: master.kubelet-client.key
+  port: 10250
+kubernetesMasterConfig:
+  admissionConfig:
+    pluginConfig: null
+  apiLevels: null
+  apiServerArguments:
+    cloud-config:
+    - /etc/aws/aws.conf
+    cloud-provider:
+    - aws
+  controllerArguments:
+    cloud-config:
+    - /etc/aws/aws.conf
+    cloud-provider:
+    - aws
+  disabledAPIGroupVersions: {}
+  masterCount: 1
+  masterEndpointReconcileTTL: 15
+  masterIP: 10.10.128.20
+  podEvictionTimeout: 5m
+  proxyClientInfo:
+    certFile: master.proxy-client.crt
+    keyFile: master.proxy-client.key
+  schedulerArguments: null
+  schedulerConfigFile: ''
+  servicesNodePortRange: 30000-32767
+  servicesSubnet: 172.30.0.0/16
+  staticNodeNames: null
+masterClients:
+  externalKubernetesClientConnectionOverrides:
+    acceptContentTypes: application/vnd.kubernetes.protobuf,application/json
+    burst: 400
+    contentType: application/vnd.kubernetes.protobuf
+    qps: 200
+  externalKubernetesKubeConfig: ''
+  openshiftLoopbackClientConnectionOverrides:
+    acceptContentTypes: application/vnd.kubernetes.protobuf,application/json
+    burst: 600
+    contentType: application/vnd.kubernetes.protobuf
+    qps: 300
+  openshiftLoopbackKubeConfig: openshift-master.kubeconfig
+masterPublicURL: https://www.${dns-tld}:443
+networkConfig:
+  clusterNetworkCIDR: 10.128.0.0/14
+  externalIPNetworkCIDRs: null
+  hostSubnetLength: 9
+  ingressIPNetworkCIDR: 172.29.0.0/16
+  networkPluginName: redhat/openshift-ovs-multitenant
+  serviceNetworkCIDR: 172.30.0.0/16
+oauthConfig:
+  alwaysShowProviderSelection: false
+  assetPublicURL: https://www.${dns-tld}:443/console/
+  grantConfig:
+    method: auto
+    serviceAccountMethod: prompt
+  identityProviders:
+  - challenge: true
+    login: true
+    mappingMethod: claim
+    name: htPassword
+    provider:
+      apiVersion: v1
+      file: /etc/origin/htpasswd
+      kind: HTPasswdPasswordIdentityProvider
+  masterCA: ca-bundle.crt
+  masterPublicURL: https://www.${dns-tld}:443
+  masterURL: https://10.10.128.20:8443
+  sessionConfig:
+    sessionMaxAgeSeconds: 300
+    sessionName: ssn
+    sessionSecretsFile: ''
+  templates: null
+  tokenConfig:
+    accessTokenMaxAgeSeconds: 86400
+    authorizeTokenMaxAgeSeconds: 300
+pauseControllers: 0
+policyConfig:
+  bootstrapPolicyFile: policy.json
+  openshiftInfrastructureNamespace: openshift-infra
+  openshiftSharedResourcesNamespace: openshift
+  userAgentMatchingConfig:
+    defaultRejectionMessage: ''
+    deniedClients: null
+    requiredClients: null
+projectConfig:
+  defaultNodeSelector: ''
+  projectRequestMessage: ''
+  projectRequestTemplate: ''
+  securityAllocator:
+    mcsAllocatorRange: s0:/2
+    mcsLabelsPerProject: 5
+    uidAllocatorRange: 1000000000-1999999999/10000
+routingConfig:
+  subdomain: dev.${dns-tld}
+serviceAccountConfig:
+  limitSecretReferences: false
+  managedNames:
+  - default
+  - builder
+  - deployer
+  masterCA: ca-bundle.crt
+  privateKeyFile: serviceaccounts.private.key
+  publicKeyFiles:
+  - serviceaccounts.public.key
+servingInfo:
+  bindAddress: 10.10.128.20:8443
+  bindNetwork: tcp4
+  certFile: master.server.crt
+  clientCA: ca.crt
+  keyFile: master.server.key
+  maxRequestsInFlight: 1200
+  namedCertificates: null
+  requestTimeoutSeconds: 3600
+templateServiceBrokerConfig: null
+volumeConfig:
+  dynamicProvisioningEnabled: true

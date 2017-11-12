@@ -180,7 +180,7 @@ oauthConfig:
   tokenConfig:
     accessTokenMaxAgeSeconds: 86400
     authorizeTokenMaxAgeSeconds: 300
-pauseControllers: 0
+#pauseControllers: 0
 policyConfig:
   bootstrapPolicyFile: policy.json
   openshiftInfrastructureNamespace: openshift-infra

@@ -6,7 +6,7 @@ admissionConfig:
         executionRules:
         - matchImageAnnotations:
           - key: images.openshift.io/deny-execution
-            value: true
+            value: "true"
           name: execution-denied
           onResources:
           - resource: pods

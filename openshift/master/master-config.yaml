@@ -69,8 +69,8 @@ dnsConfig:
   bindNetwork: tcp4
 etcdClientInfo:
   ca: ''
-  certFile: ''
-  keyFile: ''
+  certFile: /usr/local/etc/origin/master/master.etcd-client.crt
+  keyFile: /usr/local/etc/origin/master/master.etcd-client.key
   urls:
   - https://10.10.128.10:2379
   - https://10.10.128.11:2379

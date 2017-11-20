@@ -45,6 +45,6 @@ volumeConfig:
 volumeDirectory: /tmp/tmp.nv6y0ECgtI/openshift.local.volumes
 kubeletArguments:
   cloud-config:
-  - /etc/aws/aws.conf
+  - /usr/local/etc/origin/aws.conf
   cloud-provider:
   - aws

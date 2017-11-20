@@ -151,7 +151,7 @@ masterClients:
 masterPublicURL: https://www.${dns-tld}:443
 networkConfig:
   clusterNetworkCIDR: 10.128.0.0/14
-  externalIPNetworkCIDRs: 10.10.128.0/24
+  externalIPNetworkCIDRs: null
   hostSubnetLength: 9
 #  ingressIPNetworkCIDR: 172.29.0.0/16 # not needed when a cloud provider is specified
   networkPluginName: redhat/openshift-ovs-multitenant

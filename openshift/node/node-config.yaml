@@ -7,7 +7,7 @@ authConfig:
   authorizationCacheTTL: 5m
 dnsBindAddress: ""
 dnsDomain: cluster.local
-dnsIP: ""
+dnsIP: 10.10.128.20
 dnsNameservers: null
 dnsRecursiveResolvConf: ""
 dockerConfig:

@@ -42,7 +42,7 @@ servingInfo:
 volumeConfig:
   localQuota:
     perFSGroup: null
-volumeDirectory: /tmp/tmp.nv6y0ECgtI/openshift.local.volumes
+volumeDirectory: /var/lib/origin/openshift.local.volumes
 kubeletArguments:
   cloud-config:
   - /usr/local/etc/origin/aws.conf

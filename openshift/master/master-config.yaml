@@ -30,9 +30,9 @@ assetConfig:
   extensions: null
   loggingPublicURL: ''
   logoutURL: ''
-  masterPublicURL: https://${dns-tld}
+  masterPublicURL: https://${dns-tld}:8443
   metricsPublicURL: https://metrics-dev.${dns-tld}
-  publicURL: https://${dns-tld}/console/
+  publicURL: https://${dns-tld}:8443/console/
   servingInfo:
     bindAddress: ${master-ip-address}:8443
     bindNetwork: tcp4
@@ -61,7 +61,7 @@ controllers: '*'
 corsAllowedOrigins:
 - 127.0.0.1
 - localhost
-- www.${dns-tld}:443
+- ${dns-tld}:8443
 disabledFeatures: null
 dnsConfig:
   allowRecursiveQueries: true
@@ -148,7 +148,7 @@ masterClients:
     contentType: application/vnd.kubernetes.protobuf
     qps: 300
   openshiftLoopbackKubeConfig: openshift-master.kubeconfig
-masterPublicURL: https://${dns-tld}
+masterPublicURL: https://${dns-tld}:8443
 networkConfig:
   clusterNetworkCIDR: 10.128.0.0/14
   externalIPNetworkCIDRs: null
@@ -158,7 +158,7 @@ networkConfig:
   serviceNetworkCIDR: 172.30.0.0/16
 oauthConfig:
   alwaysShowProviderSelection: false
-  assetPublicURL: https://${dns-tld}/console/
+  assetPublicURL: https://${dns-tld}:8443/console/
   grantConfig:
     method: auto
     serviceAccountMethod: prompt
@@ -172,7 +172,7 @@ oauthConfig:
       file: /usr/local/etc/origin/htpasswd
       kind: HTPasswdPasswordIdentityProvider
   masterCA: ca-bundle.crt
-  masterPublicURL: https://${dns-tld}
+  masterPublicURL: https://${dns-tld}:8443
   masterURL: https://${master-ip-address}:8443
   sessionConfig:
     sessionMaxAgeSeconds: 300

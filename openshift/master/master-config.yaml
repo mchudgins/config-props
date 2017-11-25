@@ -214,9 +214,9 @@ serviceAccountConfig:
 servingInfo:
   bindAddress: ${master-ip-address}:8443
   bindNetwork: tcp4
-  certFile: dev.dstcorp.io.crt
+  certFile: master.server.crt
   clientCA: ca.crt
-  keyFile: dev.dstcorp.io.key
+  keyFile: master.server.key
   maxRequestsInFlight: 1200
   namedCertificates: null
   requestTimeoutSeconds: 3600

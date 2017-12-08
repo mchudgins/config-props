@@ -218,7 +218,11 @@ servingInfo:
   clientCA: ca.crt
   keyFile: master.server.key
   maxRequestsInFlight: 1200
-  namedCertificates: null
+  namedCertificates:
+  - certFile: /usr/local/etc/origin/dev-dstcorp-io.crt
+    keyFile: /usr/local/etc/origin/dev-dstcorp-io.key
+    names:
+    - "dev.dstcorp.io"
   requestTimeoutSeconds: 3600
 templateServiceBrokerConfig: null
 volumeConfig:

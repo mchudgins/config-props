@@ -13,3 +13,10 @@ spring:
 nginx:
   server:
     name: develop.com
+---
+spring:
+  profiles: dev
+nginx:
+  server:
+    name: dev.com
+

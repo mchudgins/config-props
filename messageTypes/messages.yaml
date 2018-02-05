@@ -1,0 +1,11 @@
+messageTypes:
+- name: w09u99901
+  id: 1
+  description: AWD Source object
+  classification: safe
+  format: json
+- name: MedicalVisit
+  id: 2
+  description: describes an individual's visit to a care provider
+  classification: HIPPAA
+  format: protobuf

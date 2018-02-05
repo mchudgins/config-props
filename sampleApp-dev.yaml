@@ -1,1 +1,2 @@
 BASE_IMAGESTREAM: java:9
+gorf: This is for development environment

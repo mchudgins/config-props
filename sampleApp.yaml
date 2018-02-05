@@ -2,3 +2,4 @@ APPLICATION: sample
 IMAGESTREAM: sample
 CONTEXT_DIR: /
 BASE_IMAGESTREAM: java:8
+gorf: false
